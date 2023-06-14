@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  asyncio:
+    container_name: asyncio
+    build:
+      context: ./asyncio
+      dockerfile: Dockerfile
+
+    volumes:
+      - ./asyncio/src:/tmp/src
+
+    entrypoint: tail -f
